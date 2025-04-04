@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nitin Chaudhary - Portfolio</title>
+    <style>
+      /* Light Mode (Default) */
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #333333;
+        --primary-color: #0073e6;
+        --section-bg: #f4f4f4;
+        --nav-bg: #e0e0e0;
+      }
+
+      /* Dark Mode */
+      .dark-mode {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --primary-color: #0073e6;
+        --section-bg: rgba(255, 255, 255, 0.1);
+        --nav-bg: #1f1f1f;
+      }
+
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        text-align: center;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      header {
+        background: var(--primary-color);
+        color: white;
+        padding: 40px;
+        margin-bottom: 40px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+
+      nav {
+        background: var(--nav-bg);
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 0 20px;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Dark Mode Toggle Button */
+      .toggle-btn {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-right: 20px;
+      }
+
+      .toggle-btn:hover {
+        background: #005bb5;
+      }
+
+      section {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: 40px auto;
+        background: var(--section-bg);
+        border-radius: 10px;
+        transition: background 0.3s;
+      }
+
+      h2 {
+        color: var(--primary-color);
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      ul li {
+        font-size: 1.2em;
+        margin: 15px 0;
+      }
+
+      .btn {
+        background: var(--primary-color);
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 15px;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #005bb5;
+        transform: scale(1.05);
+      }
+
+      footer {
+        background: var(--nav-bg);
+        padding: 20px;
+        margin-top: 40px;
+        transition: background 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+    </nav>
+
+    <header>
+      <h1>Nitin Chaudhary</h1>
+      <p>
+        A motivated and detail-oriented computer science graduate with a strong
+        foundation in software development, automation, and problem-solving.
+      </p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a BCA student with expertise in Python, C, C++, and front-end
+        technologies like HTML & CSS.
+      </p>
+      <p>
+        My interest lies in automation, software development, and web
+        development.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>
+          <strong>Programming Languages:</strong> Python, C, C++, HTML & CSS
+        </li>
+        <li><strong>Databases:</strong> MS-SQL</li>
+        <li><strong>Tools & Frameworks:</strong> UiPath Studio, Turbo C</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>PDF Data Extractor:</strong> Automated text extraction using
+          UiPath Studio & VB.NET.
+        </li>
+        <li>
+          <strong>Image Data Extractor:</strong> Used OCR to extract text from
+          images.
+        </li>
+        <li>
+          <strong>Simple Chat-Bot:</strong> Python chatbot with predefined
+          responses.
+        </li>
+        <li>
+          <strong>Dice Rolling Simulator:</strong> Python game with randomized
+          logic.
+        </li>
+        <li>
+          <strong>Number Guessing Game:</strong> Interactive Python game with
+          feedback loops.
+        </li>
+      </ul>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <a href="Nitin-Chaudhary.pdf" target="_blank" class="btn">View Resume</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        📧 Email:
+        <a href="mailto:nitinchaudhary016@gmail.com" target="_blank"
+          >nitinchaudhary016@gmail.com</a
+        >
+      </p>
+      <p>📞 Phone: <a href="tel:+919311157708">+91 93111 57708</a></p>
+      <p>
+        🔗 LinkedIn:
+        <a href="https://linkedin.com/in/itsnitinchaudhary" target="_blank"
+          >linkedin.com/in/itsnitinchaudhary</a
+        >
+      </p>
+      <p>
+        💻 GitHub:
+        <a href="https://github.com/itsnitinchaudhary" target="_blank"
+          >github.com/itsnitinchaudhary</a
+        >
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Nitin Chaudhary. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        let button = document.querySelector(".toggle-btn");
+        if (document.body.classList.contains("dark-mode")) {
+          button.textContent = "☀️ Light Mode";
+        } else {
+          button.textContent = "🌙 Dark Mode";
+        }
+      }
+    </script>
+  </body>
+</html>
